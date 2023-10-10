@@ -16,8 +16,24 @@ public class Ventana {
             if(codigo.charAt(i)=='('){
                 p.insertar('(');
             }else {
-                if (codigo.charAt(i)==')'){
-                    if(p.eliminar()!='(')
+                if (codigo.charAt(i) == ')') {
+                    if (p.eliminar() != '(')
+                        return false;
+                }
+            }
+            if(codigo.charAt(i)=='['){
+                p.insertar('[');
+            }else {
+                if (codigo.charAt(i) == ']') {
+                    if (p.eliminar() != '[')
+                        return false;
+                }
+            }
+            if(codigo.charAt(i)=='{'){
+                p.insertar('{');
+            }else {
+                if (codigo.charAt(i) == '}') {
+                    if (p.eliminar() != '{')
                         return false;
                 }
             }
@@ -29,7 +45,6 @@ public class Ventana {
             return false;
         }
     }
-
     public Ventana() {
 
         btnVerificar.addActionListener(new ActionListener() {
